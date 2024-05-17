@@ -14,7 +14,7 @@ export function Overview() {
       <div className='card mb-5 mb-xl-10' id='kt_profile_details_view'>
         <div className='card-header cursor-pointer'>
           <div className='card-title m-0'>
-            <h3 className='fw-bolder m-0'>Profile Details</h3>
+            <h3 className='fw-bolder m-0'>جزئیات نمایه</h3>
           </div>
 
           <Link to='/crafted/account/settings' className='btn btn-primary align-self-center'>
@@ -32,16 +32,24 @@ export function Overview() {
           </div>
 
           <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Company</label>
+            <label className='col-lg-4 fw-bold text-muted'>کد ملی </label>
 
             <div className='col-lg-8 fv-row'>
-              <span className='fw-bold fs-6'>Keenthemes</span>
+              <span className='fw-bold fs-6'>4980369952</span>
+            </div>
+          </div>
+
+          <div className='row mb-7'>
+            <label className='col-lg-4 fw-bold text-muted'> شماره دانشجویی  </label>
+
+            <div className='col-lg-8 fv-row'>
+              <span className='fw-bold fs-6'>99120372</span>
             </div>
           </div>
 
           <div className='row mb-7'>
             <label className='col-lg-4 fw-bold text-muted'>
-              Contact Phone
+            شماره تماس
               <i
                 className='fas fa-exclamation-circle ms-1 fs-7'
                 data-bs-toggle='tooltip'
@@ -57,18 +65,18 @@ export function Overview() {
           </div>
 
           <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Company Site</label>
+            <label className='col-lg-4 fw-bold text-muted'>ایمیل</label>
 
             <div className='col-lg-8'>
               <a href='#' className='fw-bold fs-6 text-gray-900 text-hover-primary'>
-                keenthemes.com11
+                example@gmail.com
               </a>
             </div>
           </div>
 
           <div className='row mb-7'>
             <label className='col-lg-4 fw-bold text-muted'>
-              Country
+            کشور
               <i
                 className='fas fa-exclamation-circle ms-1 fs-7'
                 data-bs-toggle='tooltip'
@@ -77,25 +85,19 @@ export function Overview() {
             </label>
 
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-gray-900'>Germany</span>
+              <span className='fw-bolder fs-6 text-gray-900'>المان</span>
             </div>
           </div>
 
           <div className='row mb-7'>
-            <label className='col-lg-4 fw-bold text-muted'>Communication</label>
+            <label className='col-lg-4 fw-bold text-muted'>ارتباط</label>
 
             <div className='col-lg-8'>
-              <span className='fw-bolder fs-6 text-gray-900'>Email, Phone</span>
+              <span className='fw-bolder fs-6 text-gray-900'>ایمیل, شماره تماس</span>
             </div>
           </div>
 
-          <div className='row mb-10'>
-            <label className='col-lg-4 fw-bold text-muted'>Allow Changes</label>
-
-            <div className='col-lg-8'>
-              <span className='fw-bold fs-6'>Yes</span>
-            </div>
-          </div>
+          
 
           <div className='notice d-flex bg-light-warning rounded border-warning border border-dashed p-6'>
             <KTIcon iconName='information-5' className='fs-2tx text-warning me-4' />

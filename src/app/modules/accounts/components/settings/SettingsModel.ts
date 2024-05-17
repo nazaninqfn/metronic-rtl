@@ -82,6 +82,8 @@ export const profileDetailsInitValues: IProfileDetails = {
   company: "Keenthemes",
   contactPhone: "044 3276 454 935",
   Email: "example@example.com",
+  address: "خیابان امیرکبیر، چهارراه رازی، کوچه امیرکبیر 51، پلاک هشت، طبقه دوم",
+
   companySite: "keenthemes.com",
   country: "",
   language: "",

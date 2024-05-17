@@ -65,7 +65,7 @@ const TablesWidget11: React.FC<Props> = ({className}) => {
                 </td>
                 <td>
                   <a href='#' className='text-gray-900 fw-bold text-hover-primary d-block mb-1 fs-6'>
-                    $2,790
+                    $2,791
                   </a>
                   <span className='text-muted fw-semibold text-muted d-block fs-7'>Paid</span>
                 </td>
