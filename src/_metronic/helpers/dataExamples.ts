@@ -76,7 +76,7 @@ export interface UserInfoModel {
 
 const defaultUserInfos: Array<UserInfoModel> = [
   {
-    name: 'Emma Smith',
+    name: 'Emma Smit',
     avatar: 'avatars/300-6.jpg',
     email: 'e.smith@kpmg.com.au',
     position: 'Art Director',
