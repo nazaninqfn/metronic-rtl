@@ -11,8 +11,10 @@ const profileDetailsSchema = Yup.object().shape({
   SId: Yup.string().required('student code is required'),
   company: Yup.string().required('Company name is required'),
   contactPhone: Yup.string().required('Contact phone is required'),
-  Email: Yup.string().required('Contact phone is required'),
-  address: Yup.string().required('Contact phone is required'),
+  Email: Yup.string().required('Email  is required'),
+  BDate: Yup.string().required('Bearth Date is required'),
+  educ: Yup.string().required('education Date is required'),
+  address: Yup.string().required('address  is required'),
   companySite: Yup.string().required('Company site is required'),
   country: Yup.string().required('Country is required'),
   language: Yup.string().required('Language is required'),
@@ -62,104 +64,163 @@ const ProfileDetails: FC = () => {
       <div id='kt_account_profile_details' className='collapse show'>
         <form onSubmit={formik.handleSubmit} noValidate className='form'>
           <div className='card-body border-top p-9'>
+
             <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label fw-bold fs-6'>عکس</label>
-              <div className='col-lg-8'>
+              <div className='col-lg-4'>
+              <label className='col-lg-4 col-form-label required fw-bold fs-6'>تصویر کاربری</label>
+              <div className='col-lg-12'>
                 <div
                   className='image-input image-input-outline'
                   data-kt-image-input='true'
                   style={{backgroundImage: `url(${toAbsoluteUrl('media/avatars/blank.png')})`}}
                 >
                   <div
-                    className='image-input-wrapper w-125px h-125px'
+                    className='image-input-wrapper w-225px h-225px'
                     style={{backgroundImage: `url(${toAbsoluteUrl(data.avatar)})`}}
                   ></div>
                 </div>
               </div>
-            </div>
+              </div>
+              <div className="col-lg-8">
 
-            <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label required fw-bold fs-6'>نام و نام خانوادگی </label>
+                <div className='col-lg-12'>
+                  <div className='row'>
 
-              <div className='col-lg-8'>
-                <div className='row'>
-                  <div className='col-lg-6 fv-row'>
-                    <input
-                      type='text'
-                      className='form-control form-control-lg form-control-solid mb-3 mb-lg-0'
-                      placeholder='First name'
-                      {...formik.getFieldProps('fName')}
-                    />
-                    {formik.touched.fName && formik.errors.fName && (
-                      <div className='fv-plugins-message-container'>
-                        <div className='fv-help-block'>{formik.errors.fName}</div>
-                      </div>
-                    )}
-                  </div>
+                    <div className='col-lg-6 fv-row'>
+                      <label className='col-lg-4 col-form-label required fw-bold fs-6'>نام </label>
 
-                  <div className='col-lg-6 fv-row'>
-                    <input
-                      type='text'
-                      className='form-control form-control-lg form-control-solid'
-                      placeholder='Last name'
-                      {...formik.getFieldProps('lName')}
-                    />
-                    {formik.touched.lName && formik.errors.lName && (
-                      <div className='fv-plugins-message-container'>
-                        <div className='fv-help-block'>{formik.errors.lName}</div>
-                      </div>
-                    )}
+                      <input
+                        type='text'
+                        className='form-control form-control-lg form-control-solid mb-3 mb-lg-0'
+                        placeholder='First name'
+                        {...formik.getFieldProps('fName')}
+                      />
+                      {formik.touched.fName && formik.errors.fName && (
+                        <div className='fv-plugins-message-container'>
+                          <div className='fv-help-block'>{formik.errors.fName}</div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className='col-lg-6 fv-row'>
+                    <label className='col-lg-4 col-form-label required fw-bold fs-6'> نام خانوادگی </label>
+
+                      <input
+                        type='text'
+                        className='form-control form-control-lg form-control-solid'
+                        placeholder='Last name'
+                        {...formik.getFieldProps('lName')}
+                      />
+                      {formik.touched.lName && formik.errors.lName && (
+                        <div className='fv-plugins-message-container'>
+                          <div className='fv-help-block'>{formik.errors.lName}</div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className='col-lg-6 fv-row'>
+                      <label className='col-lg-4 col-form-label required fw-bold fs-6'>کد ملی </label>
+
+                      <input
+                        type='text'
+                        className='form-control form-control-lg form-control-solid'
+                        placeholder='کد ملی '
+                        {...formik.getFieldProps('NId')}
+                      />
+                      {formik.touched.NId && formik.errors.NId && (
+                        <div className='fv-plugins-message-container'>
+                          <div className='fv-help-block'>{formik.errors.NId}</div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className='col-lg-6 fv-row'>
+                      <label className='col-lg-4 col-form-label required fw-bold fs-6'>شماره دانشجویی  </label>
+
+                        <input
+                          type='text'
+                          className='form-control form-control-lg form-control-solid'
+                          placeholder='شماره دانشجویی '
+                          {...formik.getFieldProps('SId')}
+                        />
+                        {formik.touched.SId && formik.errors.SId && (
+                          <div className='fv-plugins-message-container'>
+                            <div className='fv-help-block'>{formik.errors.SId}</div>
+                          </div>
+                        )}
+                    </div>
+
+                    <div className='col-lg-6 fv-row'>
+                      <label className='col-lg-4 col-form-label fw-bold fs-6'>
+                        <span className='required'>تاریخ تولد</span>
+                      </label>
+                      <input
+                        type='text'
+                        className='form-control form-control-lg form-control-solid'
+                        placeholder='تاریخ '
+                        {...formik.getFieldProps('BDate')}
+                      />
+                      {formik.touched.BDate && formik.errors.BDate && (
+                        <div className='fv-plugins-message-container'>
+                          <div className='fv-help-block'>{formik.errors.BDate}</div>
+                        </div>
+                      )}
+                    </div>
+
+                    
+                    <div className='col-lg-6 fv-row'>
+                      <label className='col-lg-4 col-form-label required fw-bold fs-6'>تحصیلات </label>
+
+                      <input
+                        type='text'
+                        className='form-control form-control-lg form-control-solid mb-3 mb-lg-0'
+                        placeholder='تحصیلات'
+                        {...formik.getFieldProps('educ')}
+                      />
+                      {formik.touched.educ && formik.errors.educ && (
+                        <div className='fv-plugins-message-container'>
+                          <div className='fv-help-block'>{formik.errors.educ}</div>
+                        </div>
+                      )}
+                    </div>
+
+
+                    
+
+
                   </div>
                 </div>
               </div>
+
+              
+              
+
             </div>
 
-            
+
 
             <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label required fw-bold fs-6'>کد ملی </label>
-
-              <div className='col-lg-8 fv-row'>
+              <div className='col-lg-4 fv-row'>
+                <label className='col-lg-4 col-form-label fw-bold fs-6'>
+                  <span className='required'>شماره تماس</span>
+                </label>
                 <input
-                  type='text'
+                  type='tel'
                   className='form-control form-control-lg form-control-solid'
-                  placeholder='کد ملی '
-                  {...formik.getFieldProps('NId')}
+                  placeholder='Phone number'
+                  {...formik.getFieldProps('MPhone')}
                 />
-                {formik.touched.NId && formik.errors.NId && (
+                {formik.touched.MPhone && formik.errors.MPhone && (
                   <div className='fv-plugins-message-container'>
-                    <div className='fv-help-block'>{formik.errors.NId}</div>
+                    <div className='fv-help-block'>{formik.errors.MPhone}</div>
                   </div>
                 )}
               </div>
-            </div>
 
-            <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label required fw-bold fs-6'>شماره دانشجویی  </label>
-
-              <div className='col-lg-8 fv-row'>
-                <input
-                  type='text'
-                  className='form-control form-control-lg form-control-solid'
-                  placeholder='شماره دانشجویی '
-                  {...formik.getFieldProps('SId')}
-                />
-                {formik.touched.SId && formik.errors.SId && (
-                  <div className='fv-plugins-message-container'>
-                    <div className='fv-help-block'>{formik.errors.SId}</div>
-                  </div>
-                )}
-              </div>
-            </div>
-
-            
-
-            <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label fw-bold fs-6'>
-                <span className='required'>شماره تماس</span>
-              </label>
-
-              <div className='col-lg-8 fv-row'>
+              <div className='col-lg-4 fv-row'>
+                <label className='col-lg-4 col-form-label fw-bold fs-6'>
+                  <span className='required'> تلفن ثابت</span>
+                </label>
                 <input
                   type='tel'
                   className='form-control form-control-lg form-control-solid'
@@ -172,14 +233,11 @@ const ProfileDetails: FC = () => {
                   </div>
                 )}
               </div>
-            </div>
 
-            <div className='row mb-6'>
-              <label className='col-lg-4 col-form-label fw-bold fs-6'>
-                <span className='required'>ایمیل</span>
-              </label>
-
-              <div className='col-lg-8 fv-row'>
+              <div className='col-lg-4 fv-row'>
+                <label className='col-lg-4 col-form-label fw-bold fs-6'>
+                  <span className='required'>ایمیل</span>
+                </label>
                 <input
                   type='tel'
                   className='form-control form-control-lg form-control-solid'
@@ -192,16 +250,19 @@ const ProfileDetails: FC = () => {
                   </div>
                 )}
               </div>
+
+                
             </div>
 
             <div className='row mb-6'>
+              
+
+              <div className='col-lg-12 fv-row'>
               <label className='col-lg-4 col-form-label fw-bold fs-6'>
                 <span className='required'>آدرس محل سکونت</span>
               </label>
-
-              <div className='col-lg-8 fv-row'>
                 <input
-                  type='tel'
+                  type='text'
                   className='form-control form-control-lg form-control-solid'
                   placeholder='آدرس محل سکونت'
                   {...formik.getFieldProps('address')}

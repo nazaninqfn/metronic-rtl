@@ -6,7 +6,11 @@ export interface IProfileDetails {
   SId:string;
   company: string;
   contactPhone: string;
+  MPhone: string;
   Email: string;
+  BDate:string;
+  educ:string;
+  address: string;
   companySite: string;
   country: string;
   language: string;
@@ -81,9 +85,11 @@ export const profileDetailsInitValues: IProfileDetails = {
   SId:"99120372",
   company: "Keenthemes",
   contactPhone: "044 3276 454 935",
+  MPhone:"09123456789",
   Email: "example@example.com",
+  BDate:"2017",
+  educ:"دیپلم",
   address: "خیابان امیرکبیر، چهارراه رازی، کوچه امیرکبیر 51، پلاک هشت، طبقه دوم",
-
   companySite: "keenthemes.com",
   country: "",
   language: "",
