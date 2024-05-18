@@ -15,34 +15,44 @@ const usersColumns: ReadonlyArray<Column<User>> = [
     Cell: ({...props}) => <UserSelectionCell id={props.data[props.row.index].id} />,
   },
   {
-    Header: (props) => <UserCustomHeader tableProps={props} title='Name' className='min-w-125px' />,
+    Header: (props) => <UserCustomHeader tableProps={props} title='کاربر' className='min-w-125px' />,
     id: 'name',
     Cell: ({...props}) => <UserInfoCell user={props.data[props.row.index]} />,
   },
   {
-    Header: (props) => <UserCustomHeader tableProps={props} title='Role' className='min-w-125px' />,
+    Header: (props) => <UserCustomHeader tableProps={props} title='زمان تعجیل' className='min-w-125px' />,
     accessor: 'role',
   },
   {
     Header: (props) => (
-      <UserCustomHeader tableProps={props} title='Last login' className='min-w-125px' />
+      <UserCustomHeader tableProps={props} title='زمان تاخیر' className='min-w-125px' />
     ),
     id: 'last_login',
     Cell: ({...props}) => <UserLastLoginCell last_login={props.data[props.row.index].last_login} />,
   },
   {
     Header: (props) => (
-      <UserCustomHeader tableProps={props} title='Two steps1' className='min-w-125px' />
+      <UserCustomHeader tableProps={props} title='ساعت حضور' className='min-w-125px' />
     ),
     id: 'two_steps',
     Cell: ({...props}) => <UserTwoStepsCell two_steps={props.data[props.row.index].two_steps} />,
   },
+  
   {
     Header: (props) => (
-      <UserCustomHeader tableProps={props} title='Joined day' className='min-w-125px' />
+      <UserCustomHeader tableProps={props} title='ساعت غیاب' className='min-w-125px' />
     ),
     accessor: 'joined_day',
   },
+  {
+    Header: (props) => (
+      <UserCustomHeader tableProps={props} title='وضعیت' className='min-w-125px' />
+    ),
+    id: 'two_stepss',
+    Cell: ({...props}) => <UserTwoStepsCell two_steps={props.data[props.row.index].two_steps} />,
+  },
+  
+  
   {
     Header: (props) => (
       <UserCustomHeader tableProps={props} title='Actions' className='text-end min-w-100px' />

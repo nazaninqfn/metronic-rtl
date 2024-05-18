@@ -11,7 +11,7 @@ type Props = {
 const UserInfoCell: FC<Props> = ({user}) => (
   <div className='d-flex align-items-center'>
     {/* begin:: Avatar */}
-    <div className='symbol symbol-circle symbol-50px overflow-hidden me-3'>
+    <div className='symbol symbol-circle symbol-50px overflow-hidden ms-3'>
       <a href='#'>
         {user.avatar ? (
           <div className='symbol-label'>
