@@ -7,15 +7,19 @@ import {MenuTestPage} from '../pages/MenuTestPage'
 import {getCSSVariableValue} from '../../_metronic/assets/ts/_utils'
 import {WithChildren} from '../../_metronic/helpers'
 import BuilderPageWrapper from '../pages/layout-builder/BuilderPageWrapper'
+import AddUser from '../modules/apps/add-user/AddUser'
+import AddSubject from '../modules/apps/add-subject/AddSubject'
 
 const PrivateRoutes = () => {
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
-  const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
   const AccountPage = lazy(() => import('../modules/accounts/AccountPage'))
   const WidgetsPage = lazy(() => import('../modules/widgets/WidgetsPage'))
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
   const UsersPage = lazy(() => import('../modules/apps/user-management/UsersPage'))
+  const AddUser = lazy(() => import('../modules/apps/add-user/AddUser'))
+  const AddSubject = lazy(() => import('../modules/apps/add-user/AddSubject'))
   const SubjectsPage = lazy(() => import('../modules/apps/Subjects-management/SubjectsPage'))
+  
 
   return (
     <Routes>
@@ -35,14 +39,7 @@ const PrivateRoutes = () => {
             </SuspensedView>
           }
         />
-        <Route
-          path='crafted/pages/wizards/*'
-          element={
-            <SuspensedView>
-              <WizardsPage />
-            </SuspensedView>
-          }
-        />
+        
         <Route
           path='crafted/widgets/*'
           element={
@@ -76,6 +73,22 @@ const PrivateRoutes = () => {
           }
         />
         <Route
+          path='apps/add-user/*'
+          element={
+            <SuspensedView>
+              <AddUser />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='apps/add-subject/*'
+          element={
+            <SuspensedView>
+              <AddSubject />
+            </SuspensedView>
+          }
+        />
+        <Route
           path='apps/subjects-management/*'
           element={
             <SuspensedView>
@@ -83,6 +96,7 @@ const PrivateRoutes = () => {
             </SuspensedView>
           }
         />
+        
         
         {/* Page Not Found */}
         <Route path='*' element={<Navigate to='/error/404' />} />

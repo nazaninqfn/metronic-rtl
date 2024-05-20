@@ -8,10 +8,16 @@ const SidebarMenuMain = () => {
 
   return (
     <>
-      <SidebarMenuItem
+      {/* <SidebarMenuItem
         to='/dashboard'
         icon='element-11'
         title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        fontIcon='bi-app-indicator'
+      /> */}
+      <SidebarMenuItem
+        to='/apps/add-subject/Add'
+        icon='element-11'
+        title=' افزودن دوره ها' 
         fontIcon='bi-app-indicator'
       />
       <SidebarMenuItem
@@ -21,12 +27,19 @@ const SidebarMenuMain = () => {
         fontIcon='bi-app-indicator'
       />
       <SidebarMenuItem
+        to='/apps/add-user/Add'
+        icon='abstract-28'
+        title=' افزودن دانش اموزان '
+        fontIcon='bi-layers'
+      />
+      <SidebarMenuItem
         to='/apps/user-management/users'
         icon='abstract-28'
         title='دانش اموزان'
         fontIcon='bi-layers'
       />
-      <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' />
+      
+      {/* <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' /> */}
       <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
@@ -93,7 +106,7 @@ const SidebarMenuMain = () => {
         <SidebarMenuItem to='/crafted/widgets/tables' title='Tables' hasBullet={true} />
         <SidebarMenuItem to='/crafted/widgets/feeds' title='Feeds' hasBullet={true} />
       </SidebarMenuItemWithSub>
-      <div className='menu-item'>
+      {/* <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
           <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Apps</span>
         </div>
@@ -125,7 +138,7 @@ const SidebarMenuMain = () => {
           </span>
           <span className='menu-title'>Changelog {import.meta.env.VITE_APP_VERSION}</span>
         </a>
-      </div>
+      </div> */}
     </>
   )
 }
