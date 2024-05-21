@@ -1,7 +1,5 @@
 import {Route, Routes, Outlet, Navigate} from 'react-router-dom'
-import { UsersListWrapper } from '../user-management/users-list/UsersList'
-// import { Tab1 } from '../user-management/users-list/components/header/Tab1'
-
+import { Tab1 } from '../user-management/users-list/components/header/Tab1'
 
 
 
@@ -13,7 +11,9 @@ const SubjectsPage = () => {
           path='Subjects'
           element={
             <>
-            <UsersListWrapper/>
+            {/* <UsersListWrapper/> */}
+            <Tab1/>
+
             </>
           }
         />

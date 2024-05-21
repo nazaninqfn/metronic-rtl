@@ -17,7 +17,7 @@ const PrivateRoutes = () => {
   const ChatPage = lazy(() => import('../modules/apps/chat/ChatPage'))
   const UsersPage = lazy(() => import('../modules/apps/user-management/UsersPage'))
   const AddUser = lazy(() => import('../modules/apps/add-user/AddUser'))
-  const AddSubject = lazy(() => import('../modules/apps/add-user/AddSubject'))
+  const AddSubject = lazy(() => import('../modules/apps/add-subject/AddSubject'))
   const SubjectsPage = lazy(() => import('../modules/apps/Subjects-management/SubjectsPage'))
   
 

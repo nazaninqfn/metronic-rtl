@@ -38,6 +38,8 @@ const SidebarMenuMain = () => {
         title='دانش اموزان'
         fontIcon='bi-layers'
       />
+      <SidebarMenuItem to='/crafted/pages/profile/overview' title='Overview' hasBullet={true} />
+
       
       {/* <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' /> */}
       <div className='menu-item'>

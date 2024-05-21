@@ -1,6 +1,5 @@
 import { Route, Routes, Outlet, Navigate } from "react-router-dom";
-
-import { Settings } from "../../accounts/components/settings/Settings";
+import { SubjectDetails } from "./SubjectDetails";
 
 const AddSubject = () => {
   return (
@@ -10,7 +9,7 @@ const AddSubject = () => {
           path="Add"
           element={
             <>
-              <Settings />
+              <SubjectDetails />
             </>
           }
         />
