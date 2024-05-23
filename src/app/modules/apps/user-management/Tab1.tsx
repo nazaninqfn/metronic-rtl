@@ -20,7 +20,6 @@ const usersBreadcrumbs: Array<PageLink> = [
 type Props = {
 className: string
 }
-
 const Tab1: FC<Props> = ({className}) => {
 return (
     <>

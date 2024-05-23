@@ -1,4 +1,16 @@
 # React + TypeScript + Vite
+<!-- 
+پنل ادمین برای آموزشگاه هادی 
+شامل ۴ صفحه 
+۱_افزودن دوره ها
+src/app/modules/apps/add-subject/AddSubject.tsx
+۲_دوره ها 
+src/app/modules/apps/subjects-management/Tab1.tsx
+۳_افزودن دانش اموزان 
+src/app/modules/apps/add-user/AddUser.tsx
+۴_دانش اموزان
+src/app/modules/apps/subjects-management/Tab1.tsx
+-->
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
